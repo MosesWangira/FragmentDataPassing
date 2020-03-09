@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 
 /**
  * A simple [Fragment] subclass.
@@ -21,7 +22,10 @@ class NextFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_next, container, false)
+        val root = inflater.inflate(R.layout.fragment_next, container, false)
+
+
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,6 +36,8 @@ class NextFragment : Fragment() {
             my_string_two = safeArgs.passedDataTwo
             Log.d("Check if data passed", my_string)
             Log.d("Check if data passed", my_string_two)
+
+            Toast.makeText(context, my_string, Toast.LENGTH_SHORT).show()
         }
     }
 
