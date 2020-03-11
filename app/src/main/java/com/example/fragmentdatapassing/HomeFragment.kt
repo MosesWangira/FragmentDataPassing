@@ -25,9 +25,11 @@ class HomeFragment : Fragment() {
 
 
 
+        // button to pass data onclick
         pass_data = root.findViewById(R.id.pass_data)
 
         pass_data.setOnClickListener {
+            //data to be passsed
             val data_one  = "Moses Wangira"
             val data_two = "Everline Mwato"
             val pass_data_to_next = HomeFragmentDirections.actionHomeFragmentToNextFragment(data_one, data_two)
